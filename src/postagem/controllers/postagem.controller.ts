@@ -25,6 +25,16 @@ export class PostagemController {
         return this.postagemService.findByTitulo(titulo);
     }
 
+     //EXTRA ----------------------------------------------------------------
+
+     @Get('/texto/:texto')
+     @HttpCode(HttpStatus.OK)
+     findByTexto(@Param('texto') texto: string): Promise<Postagem[]> {
+        return this.postagemService.findByTexto(texto);
+     }
+     
+     //----------------------------------------------------------------------
+
     @Post()
     @HttpCode(HttpStatus.CREATED)
     create(@Body() postagem: Postagem): Promise<Postagem> {
