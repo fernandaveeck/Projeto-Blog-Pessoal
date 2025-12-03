@@ -25,7 +25,7 @@ export class PostagemController {
         return this.postagemService.findByTitulo(titulo);
     }
 
-     //EXTRA ----------------------------------------------------------------
+
 
      @Get('/texto/:texto')
      @HttpCode(HttpStatus.OK)
@@ -33,7 +33,7 @@ export class PostagemController {
         return this.postagemService.findByTexto(texto);
      }
      
-     //----------------------------------------------------------------------
+
 
     @Post()
     @HttpCode(HttpStatus.CREATED)
