@@ -7,6 +7,8 @@ export class UsuarioController {
 
     constructor(private readonly usuarioService: UsuarioService) { }
 
+    
+
     @Post('/cadastrar')
     create(@Body() usuario: Usuario): Promise<Usuario> {
         return this.usuarioService.create(usuario);
