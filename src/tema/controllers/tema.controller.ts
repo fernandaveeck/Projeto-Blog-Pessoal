@@ -3,7 +3,10 @@ import { TemaService } from "../services/tema.service";
 import { Tema } from "../entities/tema.entity";
 import { DeleteResult } from "typeorm";
 import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
+import { ApiBearerAuth, ApiTags } from "@nestjs/swagger";
 
+@ApiTags('Tema')
+@ApiBearerAuth()
 @UseGuards(JwtAuthGuard)
 @Controller('/temas')
 export class TemaController {
