@@ -9,7 +9,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('API Blog Pessoal')
     .setDescription('Documentação da API')
-    .setContact('Generation Brasil', 'http://brasil.generation.org', 'contato@generation.org')
+    .setContact('Fernanda Silveira Veeck', 'https://github.com/fernandaveeck', 'fernandaveeck@gmail.com')
     .setVersion('1.0')
     .addBearerAuth()
     .build();
